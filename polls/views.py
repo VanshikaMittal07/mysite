@@ -31,3 +31,4 @@ def redirect_url(request, token):
     if(page.created_at < timezone.now() - timedelta(minutes=1)):
         return HttpResponse('Token has expired. Please regenrate the token')
     return redirect(page.url)
+ 
